@@ -34,7 +34,6 @@ function showCapacity(event) {
 
 function getCapacity() {
   let capacity = 0;
-  debugger
   [...document.getElementById('reservation_number_of_tables').children].forEach(function(child) {
     if(child.selected) {
       capacity += parseInt(child.dataset['capacity'])
@@ -51,3 +50,11 @@ function submitForm(event) {
     return false;
   }
 }
+
+$(document).on('turbolinks:load', function() {
+  if($('.alert').length > 0) {
+    setTimeout(() => {
+      $('.alert').remove();
+    }, 3000);
+  }
+})
