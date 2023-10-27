@@ -112,7 +112,7 @@
             </div>
             <div class="col-6">
               <span>
-                <%= link_to "Delete", reservation_path(reservation.id), data: { turbo_method: :delete, turbo_confirm: 'Are you sure want to delete ?' }, class: 'btn btn-sm btn-danger' %>
+                <%= link_to "Delete", reservation_path(reservation.id), data: { method: :delete, confirm: 'Are you sure want to delete ?' }, class: 'btn btn-sm btn-danger' %>
               </span>
             </div>
           </div>
